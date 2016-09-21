@@ -48,6 +48,12 @@ public class registro2 extends javax.swing.JFrame {
             }
         });
 
+        field_usuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                field_usuarioMousePressed(evt);
+            }
+        });
+
         userNotFound.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
@@ -135,6 +141,11 @@ public class registro2 extends javax.swing.JFrame {
         mi.setVisible(true);
         dispose();
     }//GEN-LAST:event_button_regresarMousePressed
+
+    private void field_usuarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_field_usuarioMousePressed
+        // TODO add your handling code here:
+        userNotFound.setText("");
+    }//GEN-LAST:event_field_usuarioMousePressed
 
     /**
      * @param args the command line arguments

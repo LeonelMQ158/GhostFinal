@@ -16,6 +16,9 @@ public class ModoDeJuego extends javax.swing.JFrame {
      */
     public ModoDeJuego() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
+        setTitle("Modo de juego");
     }
 
     /**
@@ -52,7 +55,7 @@ public class ModoDeJuego extends javax.swing.JFrame {
 
         button_regresar.setText("Regresar");
 
-        revisar_consola.setVisible(false);
+        revisar_consola.setVisible(true);
 
         jLabel1.setText("Favor, revisar consola para la configuracion manual");
 
@@ -69,7 +72,7 @@ public class ModoDeJuego extends javax.swing.JFrame {
             revisar_consolaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(revisar_consolaLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(revisar_consolaLayout.createSequentialGroup()
                 .addGap(164, 164, 164)
@@ -102,7 +105,7 @@ public class ModoDeJuego extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(102, 102, 102)
                         .addComponent(button_regresar)))
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

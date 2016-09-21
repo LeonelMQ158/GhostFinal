@@ -163,7 +163,7 @@ public class menu {
                         }
     }
     
-       public menu(){
+     /*  public menu(){
         do{
             System.out.println("---------------------");
             System.out.println("---Menu Principal---");
@@ -469,6 +469,7 @@ public class menu {
             }
         }while(menu == true);
     }
+*/
        public void cordnull(int fila, int columna){
            while(true){
                try{

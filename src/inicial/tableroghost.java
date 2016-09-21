@@ -69,6 +69,13 @@ public class tableroghost extends javax.swing.JPanel{
     int j2f = 0;
     boolean jj1 = false;
     boolean jj2 = false;
+    
+    public void ponerEnBlancoLasCasillas(){
+        xsel.setText("");
+        ysel.setText("");
+        xmov.setText("");
+        ymov.setText("");
+    }
   
     public tableroghost(){
         
@@ -281,9 +288,13 @@ public class tableroghost extends javax.swing.JPanel{
                     public void actionPerformed(ActionEvent ae) {
                         try {
                             f = Integer.parseInt(xsel.getText());
+                            f-=1;
                             c = Integer.parseInt(ysel.getText());
+                            c-=1;
                             fm = Integer.parseInt(xmov.getText());
+                            fm-=1;
                             cm = Integer.parseInt(ymov.getText());
+                            cm-=1;
                             } catch (NumberFormatException nfe) {
                             Component mensaje = null;
                             if(f == -1 || c == -1 || fm == -1 || cm == -1){
@@ -291,20 +302,18 @@ public class tableroghost extends javax.swing.JPanel{
                             }
                             JOptionPane.showMessageDialog(mensaje, "Solo se permiten valores numericos en los campos de coordenadas."); 
                             errcor = true;
+                            ponerEnBlancoLasCasillas();
                             }
                         if(errcor){
                             f = 0;
                             c = 0;
                             fm = 0;
                             cm = 0;
-                            xsel.setText("");
-                            ysel.setText("");
-                            xmov.setText("");
-                            ymov.setText("");
+                            ponerEnBlancoLasCasillas();
                             errcor = false;
                         }
                         if(f > 5 || c > 5 || fm > 5 || cm > 5){
-                          JOptionPane.showMessageDialog(mensaje, "No se permiten numeros mayores que 5 en ninguno de los campos."); 
+                          JOptionPane.showMessageDialog(mensaje, "No se permiten numeros mayores que 6 en ninguno de los campos."); 
                         }else{
                             JButton posicion = lugares[f][c];
                             Boolean espacio = espacios[f][c];
@@ -319,10 +328,7 @@ public class tableroghost extends javax.swing.JPanel{
                                     espacio2 = espacio;
                                     espacio = false; 
                                     jugador+=1;
-                                    xsel.setText("");
-                                    ysel.setText("");
-                                    xmov.setText("");
-                                    ymov.setText("");
+                                    ponerEnBlancoLasCasillas();
                                 }else if(lugares[f][c].getIcon() == j1 && lugares[fm][cm].getIcon() == j2){
                                     if(lugares[fm][cm] == lugares[0][5] || lugares[fm][cm] == lugares[0][0] && espacio == false){
                                             JOptionPane.showMessageDialog(mensaje, "¡Has Ganado! " + jugador1.usuario + " + 3 puntos");
@@ -334,10 +340,7 @@ public class tableroghost extends javax.swing.JPanel{
                                     posicion.setIcon(blanco);
                                     posicion2.setIcon(j1);
                                     jugador+=1;
-                                    xsel.setText("");
-                                    ysel.setText("");
-                                    xmov.setText("");
-                                    ymov.setText("");
+                                    ponerEnBlancoLasCasillas();
                                     if(espacio2 == true){
                                     JOptionPane.showMessageDialog(mensaje, "Te Comiste un Fantasma Malo");  
                                     }else{
@@ -355,17 +358,22 @@ public class tableroghost extends javax.swing.JPanel{
                                     espacio = false;
                                 }else if(lugares[fm][cm].getIcon() != blanco && lugares[fm][cm].getIcon() == j1){
                                     JOptionPane.showMessageDialog(mensaje, "Las Coordenadas Elegidas Para El Destino Está Actualmente Ocupada");
+                                    ponerEnBlancoLasCasillas();
                                          }else {
                                     JOptionPane.showMessageDialog(mensaje, "Porfavor Ingresar Las Coordenadas Correctamente en Seleccionar");
+                                    ponerEnBlancoLasCasillas();
                                          }
                             }else{
-                                    JOptionPane.showMessageDialog(mensaje, "No Se Permite Moverse Mas de un Espacio"); 
+                                    JOptionPane.showMessageDialog(mensaje, "No Se Permite Moverse Mas de un Espacio");
+                                    ponerEnBlancoLasCasillas();
                             }
                         }else{
-                                    JOptionPane.showMessageDialog(mensaje, "No Se Permite Moverse Mas de un Espacio"); 
+                                    JOptionPane.showMessageDialog(mensaje, "No Se Permite Moverse Mas de un Espacio");
+                                    ponerEnBlancoLasCasillas();
                         }
                  }else if(lugares[f][c].getIcon() != blanco && lugares[f][c].getIcon() == j1 && jugador != 1 && jm1 == true){
                         JOptionPane.showMessageDialog(mensaje, "Es el turno del Jugador " + jugador + ": " + jugador2.usuario);
+                        ponerEnBlancoLasCasillas();
                  }
                         if(jugador == 2 && jm1 == true && lugares[f][c].getIcon()== j2){
                         if(fm - f == - 1 || fm - f == 1 || fm == f){
@@ -376,10 +384,7 @@ public class tableroghost extends javax.swing.JPanel{
                                     espacio2 = espacio;
                                     espacio = false; 
                                     jugador -=1;
-                                    xsel.setText("");
-                                    ysel.setText("");
-                                    xmov.setText("");
-                                    ymov.setText("");
+                                    ponerEnBlancoLasCasillas();
                                  }else if(lugares[f][c].getIcon() == j2 && lugares[fm][cm].getIcon() == j1){
                                      if(lugares[fm][cm] == lugares[5][5] || lugares[fm][cm] == lugares[5][0] && espacio == false){
                                             JOptionPane.showMessageDialog(mensaje, "¡Has Ganado! " + jugador2.usuario + " + 3 puntos");
@@ -391,10 +396,7 @@ public class tableroghost extends javax.swing.JPanel{
                                     posicion.setIcon(blanco);
                                     posicion2.setIcon(j2);
                                     jugador -=1;
-                                    xsel.setText("");
-                                    ysel.setText("");
-                                    xmov.setText("");
-                                    ymov.setText("");
+                                    ponerEnBlancoLasCasillas();
                                     if(espacio2 == true){
                                     JOptionPane.showMessageDialog(mensaje, "Te Comiste un Fantasma Malo");  
                                     }else{
@@ -412,17 +414,22 @@ public class tableroghost extends javax.swing.JPanel{
                                     espacio = false;
                                 }else if(lugares[fm][cm].getIcon() != blanco && lugares[fm][cm].getIcon() == j2){
                                     JOptionPane.showMessageDialog(mensaje, "Las Coordenadas Elegidas Para El Destino Está Actualmente Ocupada");
+                                    ponerEnBlancoLasCasillas();
                                          }else {
                                     JOptionPane.showMessageDialog(mensaje, "Porfavor Ingresar Las Coordenadas Correctamente en Seleccionar");
+                                    ponerEnBlancoLasCasillas();
                                          }
                             }else{
-                                    JOptionPane.showMessageDialog(mensaje, "No Se Permite Moverse Mas de un Espacio"); 
+                                    JOptionPane.showMessageDialog(mensaje, "No Se Permite Moverse Mas de un Espacio");
+                                    ponerEnBlancoLasCasillas();
                             }
                         }else{
-                                    JOptionPane.showMessageDialog(mensaje, "No Se Permite Moverse Mas de un Espacio"); 
+                                    JOptionPane.showMessageDialog(mensaje, "No Se Permite Moverse Mas de un Espacio");
+                                    ponerEnBlancoLasCasillas();
                         }
                       }else if(lugares[f][c].getIcon() != blanco && lugares[f][c].getIcon() == j2 && jugador != 2 && jm2 == true){
-                                JOptionPane.showMessageDialog(mensaje, "Es el turno del Jugador " + jugador + ": " + jugador1.usuario); 
+                                JOptionPane.showMessageDialog(mensaje, "Es el turno del Jugador " + jugador + ": " + jugador1.usuario);
+                                ponerEnBlancoLasCasillas();
                             }
                     }
                         if(jugador == 2 && jm2 == true){

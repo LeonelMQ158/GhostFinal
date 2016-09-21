@@ -16,6 +16,9 @@ public class Dificultad extends javax.swing.JFrame {
      */
     public Dificultad() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
+        setTitle("Dificultad");
     }
 
     /**
@@ -27,21 +30,96 @@ public class Dificultad extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        button_normal = new javax.swing.JButton();
+        button_experto = new javax.swing.JButton();
+        button_genius = new javax.swing.JButton();
+        button_regresar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        button_normal.setText("Normal");
+        button_normal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                button_normalMousePressed(evt);
+            }
+        });
+
+        button_experto.setText("Experto");
+        button_experto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                button_expertoMousePressed(evt);
+            }
+        });
+
+        button_genius.setText("Genius");
+        button_genius.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                button_geniusMousePressed(evt);
+            }
+        });
+
+        button_regresar.setText("Regresar");
+        button_regresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                button_regresarMousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(button_genius, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(button_experto, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(button_normal, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(156, 156, 156)
+                        .addComponent(button_regresar)))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(button_normal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(button_experto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(button_genius, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(button_regresar)
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void button_normalMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_normalMousePressed
+        // TODO add your handling code here:
+        menu.dificultad = 'a';
+    }//GEN-LAST:event_button_normalMousePressed
+
+    private void button_expertoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_expertoMousePressed
+        // TODO add your handling code here:
+        menu.dificultad = 'b';
+    }//GEN-LAST:event_button_expertoMousePressed
+
+    private void button_geniusMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_geniusMousePressed
+        // TODO add your handling code here:
+        menu.dificultad = 'c';
+    }//GEN-LAST:event_button_geniusMousePressed
+
+    private void button_regresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_regresarMousePressed
+        // TODO add your handling code here:
+        Configuracion confi = new Configuracion();
+        confi.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_button_regresarMousePressed
 
     /**
      * @param args the command line arguments
@@ -79,5 +157,9 @@ public class Dificultad extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton button_experto;
+    private javax.swing.JButton button_genius;
+    private javax.swing.JButton button_normal;
+    private javax.swing.JButton button_regresar;
     // End of variables declaration//GEN-END:variables
 }

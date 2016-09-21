@@ -60,16 +60,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Dificultad"/>
       </Properties>
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_dificultadMousePressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_modojuego">
       <Properties>
         <Property name="text" type="java.lang.String" value="Modo de juego"/>
       </Properties>
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_modojuegoMousePressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="button_regresar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Regresar"/>
       </Properties>
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_regresarMousePressed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -170,8 +170,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_reportesMousePressed
 
     private void perfilMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_perfilMousePressed
-        Perfil perfil = new Perfil();
-        perfil.setVisible(true);
+        Perfil perf = new Perfil();
+        perf.setVisible(true);
         dispose();
     }//GEN-LAST:event_perfilMousePressed
 

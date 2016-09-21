@@ -60,7 +60,7 @@ public class MenuInicial extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/home/alejandro/Documentos/GhostFinal/ghost-156969_640.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inicial/ghost-156969_640.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         jLabel2.setFont(new java.awt.Font("NanumBarunGothic", 1, 24)); // NOI18N

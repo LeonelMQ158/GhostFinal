@@ -93,13 +93,14 @@ public class login_juego extends javax.swing.JFrame {
     private void button_ingresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_ingresarMousePressed
         // TODO add your handling code here:
         menu m = new menu();
-        tableroghost tablero = new tableroghost();
+        
         menu.usuario2 = field_player2.getText();
         m.jugar();
-        if (m.jugar==false)
+        if (m.jugar==false){
           label_usernotfound.setText("Usuario no encontrado");
+        }
         else{
-            tablero.setVisible(true);
+            new tableroghost();
             dispose();
         }
             

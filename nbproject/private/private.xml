@@ -3,20 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/EliminarCuenta.java</file>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/registro2.java</file>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/Datos.java</file>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/MenuPrincipal.java</file>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/Perfil.java</file>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/login2.java</file>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/login.java</file>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/jugadores.java</file>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/CambiarContraseña.java</file>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/Reportes.java</file>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/Ranking.java</file>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/UltimosJuegos.java</file>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/MenuInicial.java</file>
-            <file>file:/C:/Users/hp/Desktop/ghosts-master/ghosts-master/src/inicial/menu.java</file>
+            <file>file:/home/alejandro/Documentos/GhostFinal/src/inicial/Configuracion.java</file>
+            <file>file:/home/alejandro/Documentos/GhostFinal/src/inicial/login2.java</file>
+            <file>file:/home/alejandro/Documentos/GhostFinal/src/inicial/login_juego.java</file>
+            <file>file:/home/alejandro/Documentos/GhostFinal/src/inicial/ModoDeJuego.java</file>
+            <file>file:/home/alejandro/Documentos/GhostFinal/src/inicial/registro2.java</file>
+            <file>file:/home/alejandro/Documentos/GhostFinal/src/inicial/Dificultad.java</file>
+            <file>file:/home/alejandro/Documentos/GhostFinal/src/inicial/MenuInicial.java</file>
+            <file>file:/home/alejandro/Documentos/GhostFinal/src/inicial/MenuPrincipal.java</file>
+            <file>file:/home/alejandro/Documentos/GhostFinal/src/inicial/menu.java</file>
+            <file>file:/home/alejandro/Documentos/GhostFinal/src/inicial/tableroghost.java</file>
         </group>
     </open-files>
 </project-private>

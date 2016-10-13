@@ -16,6 +16,9 @@ public class Configuracion extends javax.swing.JFrame {
      */
     public Configuracion() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
+        setTitle("Configuracion");
     }
 
     /**
@@ -34,10 +37,25 @@ public class Configuracion extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         button_dificultad.setText("Dificultad");
+        button_dificultad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                button_dificultadMousePressed(evt);
+            }
+        });
 
         button_modojuego.setText("Modo de juego");
+        button_modojuego.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                button_modojuegoMousePressed(evt);
+            }
+        });
 
         button_regresar.setText("Regresar");
+        button_regresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                button_regresarMousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -69,6 +87,27 @@ public class Configuracion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void button_dificultadMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_dificultadMousePressed
+        // TODO add your handling code here:
+        Dificultad dif = new Dificultad();
+        dif.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_button_dificultadMousePressed
+
+    private void button_modojuegoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_modojuegoMousePressed
+        // TODO add your handling code here:
+        ModoDeJuego mj = new ModoDeJuego();
+        mj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_button_modojuegoMousePressed
+
+    private void button_regresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_regresarMousePressed
+        // TODO add your handling code here:
+        MenuPrincipal mp = new MenuPrincipal();
+        mp.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_button_regresarMousePressed
 
     /**
      * @param args the command line arguments

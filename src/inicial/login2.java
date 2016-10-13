@@ -40,6 +40,12 @@ public class login2 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        field_usuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                field_usuarioMousePressed(evt);
+            }
+        });
+
         jButton1.setText("OK");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -134,6 +140,11 @@ public class login2 extends javax.swing.JFrame {
         mi.setVisible(true);
         dispose();
     }//GEN-LAST:event_button_regresarMousePressed
+
+    private void field_usuarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_field_usuarioMousePressed
+        // TODO add your handling code here:
+        label_usernotfound.setText("");
+    }//GEN-LAST:event_field_usuarioMousePressed
 
     /**
      * @param args the command line arguments

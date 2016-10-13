@@ -33,11 +33,10 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="39" max="32767" attributes="0"/>
+                      <EmptySpace pref="51" max="32767" attributes="0"/>
                       <Component id="field_player2" min="-2" pref="189" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="button_ingresar" min="-2" pref="47" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="button_ingresar" min="-2" pref="61" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
@@ -86,6 +85,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Regresar"/>
       </Properties>
+      <Events>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_regresarMousePressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="label_usernotfound">
       <Properties>

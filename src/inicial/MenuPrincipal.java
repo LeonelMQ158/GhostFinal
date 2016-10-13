@@ -36,6 +36,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         perfil = new javax.swing.JButton();
         cs = new javax.swing.JButton();
         salir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,26 +93,40 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inicial/ghost-156969_640.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+
+        jLabel2.setFont(new java.awt.Font("NanumBarunGothic", 1, 24)); // NOI18N
+        jLabel2.setText("Ghosts!");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(129, 129, 129)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(salir, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(cs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(perfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(reportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(button_config, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                        .addComponent(button_jugar, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)))
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(button_jugar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(button_config, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(reportes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(perfil, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cs, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(salir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(69, 69, 69))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(115, 115, 115)
+                        .addComponent(jLabel2)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addGap(51, 51, 51)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
                 .addComponent(button_jugar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(button_config, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -118,11 +134,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addComponent(reportes, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(perfil, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(69, 69, 69)
                 .addComponent(cs, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(salir, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -137,6 +154,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void button_configMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_configMousePressed
         // TODO add your handling code here:
+        Configuracion c = new Configuracion();
+        c.setVisible(true);
+        dispose();
     }//GEN-LAST:event_button_configMousePressed
 
     private void reportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportesActionPerformed
@@ -150,8 +170,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_reportesMousePressed
 
     private void perfilMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_perfilMousePressed
-        Perfil perfil = new Perfil();
-        perfil.setVisible(true);
+        Perfil perf = new Perfil();
+        perf.setVisible(true);
         dispose();
     }//GEN-LAST:event_perfilMousePressed
 
@@ -208,6 +228,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton button_config;
     private javax.swing.JButton button_jugar;
     private javax.swing.JButton cs;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton perfil;
     private javax.swing.JButton reportes;
     private javax.swing.JButton salir;

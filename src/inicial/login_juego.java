@@ -49,6 +49,11 @@ public class login_juego extends javax.swing.JFrame {
         });
 
         button_regresar.setText("Regresar");
+        button_regresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                button_regresarMousePressed(evt);
+            }
+        });
 
         label_usernotfound.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
 
@@ -65,11 +70,10 @@ public class login_juego extends javax.swing.JFrame {
                         .addComponent(button_regresar))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                         .addComponent(field_player2, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(button_ingresar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14)))
+                        .addComponent(button_ingresar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(17, 17, 17))
         );
         layout.setVerticalGroup(
@@ -93,17 +97,25 @@ public class login_juego extends javax.swing.JFrame {
     private void button_ingresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_ingresarMousePressed
         // TODO add your handling code here:
         menu m = new menu();
-        tableroghost tablero = new tableroghost();
+        
         menu.usuario2 = field_player2.getText();
         m.jugar();
-        if (m.jugar==false)
+        if (m.jugar==false||menu.usuario2.equalsIgnoreCase(login.usuario)){
           label_usernotfound.setText("Usuario no encontrado");
+        }
         else{
-            tablero.setVisible(true);
+            new tableroghost();
             dispose();
         }
             
     }//GEN-LAST:event_button_ingresarMousePressed
+
+    private void button_regresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_regresarMousePressed
+        // TODO add your handling code here:
+        MenuPrincipal mp = new MenuPrincipal();
+        mp.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_button_regresarMousePressed
 
     /**
      * @param args the command line arguments
